@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卡片类型:"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
+
+        <Spinner
+            android:id="@+id/spinner_cardtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_type"
+            />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送数据:"
+            android:layout_marginTop="15dp"
+            android:layout_alignTop="@id/et_input"
+            android:layout_alignLeft="@id/tv_type"
+            />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="e0 51"
+            android:inputType="text"
+            android:fontFamily="monospace"
+            android:layout_below="@id/spinner_cardtype"
+            android:layout_alignLeft="@+id/spinner_cardtype"
+            />
+
+
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/et_input"
+            android:layout_below="@id/et_input"
+            android:text="发送" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignTop="@id/tv2"
+            android:layout_toRightOf="@id/tv2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/border"
+            android:textColor="@android:color/black"
+            android:fontFamily="monospace"
+            />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
